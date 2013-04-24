@@ -18,7 +18,7 @@
    * @copyright Copyright (C) 2012 evalcode.net
    * @license GNU General Public License 3
    */
-  class Binding_Exception extends Exception
+  class Binding_Exception extends Runtime_Exception
   {
 
   }
