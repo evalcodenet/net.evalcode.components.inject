@@ -1,6 +1,9 @@
 <?php
 
 
+namespace Components;
+
+
   // DECLARES
   // - Annotation_Binding
   // - Annotation_Binding_Provider

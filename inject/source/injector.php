@@ -1,6 +1,9 @@
 <?php
 
 
+namespace Components;
+
+
   /**
    * Injector
    *
@@ -584,7 +587,7 @@
      */
     private function injectMembersImpl($object_)
     {
-      $object=new ReflectionObject($object_);
+      $object=new \ReflectionObject($object_);
 
       foreach(Annotations::get($object->name)->getPropertyAnnotations() as $propertyName=>$annotations)
       {
