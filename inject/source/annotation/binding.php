@@ -19,12 +19,7 @@ namespace Components;
    * @package net.evalcode.components
    * @subpackage inject.annotation
    *
-   * @since 1.0
-   * @access public
-   *
-   * @author Carsten Schipke <carsten.schipke@evalcode.net>
-   * @copyright Copyright (C) 2012 evalcode.net
-   * @license GNU General Public License 3
+   * @author evalcode.net
    *
    * @see Components.Annotation_Binding_Provider
    * @see Components.Annotation_Inject
@@ -42,12 +37,7 @@ namespace Components;
    * @package net.evalcode.components
    * @subpackage inject.annotation
    *
-   * @since 1.0
-   * @access public
-   *
-   * @author Carsten Schipke <carsten.schipke@evalcode.net>
-   * @copyright Copyright (C) 2012 evalcode.net
-   * @license GNU General Public License 3
+   * @author evalcode.net
    */
   final class Annotation_Binding_Provider extends Annotation_Binding
   {
