@@ -32,7 +32,7 @@ namespace Components;
    *     }
    *
    *
-   *     // IMPLEMENTS
+   *     // OVERRIDES/IMPLEMENTS
    *     public static function getType()
    *     {
    *       return 'Connection_Sql';

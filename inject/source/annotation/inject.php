@@ -14,7 +14,7 @@ namespace Components;
    */
   final class Annotation_Inject extends Annotation_Binding
   {
-    // CONSTANTS
+    // PREDEFINED PROPERTIES
     /**
      * Inject
      *

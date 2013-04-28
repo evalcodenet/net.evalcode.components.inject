@@ -99,7 +99,7 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // IMPLEMENTS
+    // OVERRIDES/IMPLEMENTS
     /**
      * @see Components.Object::hashCode()
      */

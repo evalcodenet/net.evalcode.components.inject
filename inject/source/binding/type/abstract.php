@@ -95,7 +95,7 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // IMPLEMENTS
+    // OVERRIDES/IMPLEMENTS
     /**
      * @see Components.Binding_Type::named()
      */

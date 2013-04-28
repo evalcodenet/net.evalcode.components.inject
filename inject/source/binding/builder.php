@@ -18,7 +18,7 @@ namespace Components;
    */
   final class Binding_Builder
   {
-    // CONSTANTS
+    // PREDEFINED PROPERTIES
     const BINDING_NAME_DEFAULT='binding';
     //--------------------------------------------------------------------------
 

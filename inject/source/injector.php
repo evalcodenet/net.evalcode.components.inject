@@ -510,7 +510,7 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // IMPLEMENTS
+    // OVERRIDES/IMPLEMENTS
     public function hashCode()
     {
       return spl_object_hash($this);

@@ -41,7 +41,7 @@ namespace Components;
    */
   final class Annotation_Binding_Provider extends Annotation_Binding
   {
-    // CONSTANTS
+    // PREDEFINED PROPERTIES
     /**
      * Provider
      *

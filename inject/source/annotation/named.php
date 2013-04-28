@@ -14,7 +14,7 @@ namespace Components;
    */
   final class Annotation_Named extends Annotation_Binding
   {
-    // CONSTANTS
+    // PREDEFINED PROPERTIES
     /**
      * Named
      *
