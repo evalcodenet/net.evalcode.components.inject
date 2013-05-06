@@ -75,14 +75,14 @@ namespace Components;
     {
       if(null===$implementationType_)
       {
-        throw new Binding_Exception('inject/binding/builder',
+        throw new Binding_Exception('components/inject/binding/builder',
           'Expected non-null argument.'
         );
       }
 
       if($this->m_isPrimitive)
       {
-        throw new Binding_Exception('inject/binding/builder',
+        throw new Binding_Exception('components/inject/binding/builder',
           'Primitives must be bound to an instance or provider.'
         );
       }
@@ -101,7 +101,7 @@ namespace Components;
     {
       if(null===$instance_)
       {
-        throw new Binding_Exception('inject/binding/builder',
+        throw new Binding_Exception('components/inject/binding/builder',
           'Expected non-null argument.'
         );
       }
@@ -122,7 +122,7 @@ namespace Components;
     {
       if(null===$provider_)
       {
-        throw new Binding_Exception('inject/binding/builder',
+        throw new Binding_Exception('components/inject/binding/builder',
           'Expected type or instance of Binding_Provider.'
         );
       }
@@ -140,7 +140,7 @@ namespace Components;
     public function getBinding()
     {
       if(null===$this->m_binding)
-        throw new Binding_Exception('inject/binding/builder', 'Corrupt binding.');
+        throw new Binding_Exception('components/inject/binding/builder', 'Corrupt binding.');
 
       return $this->m_binding;
     }

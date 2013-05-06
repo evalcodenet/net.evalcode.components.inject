@@ -30,7 +30,7 @@ namespace Components;
    *
    * @author evalcode.net
    */
-  interface Binding_Type
+  interface Binding_Type extends Object
   {
     // ACCESSORS
     /**

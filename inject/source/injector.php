@@ -33,11 +33,11 @@ namespace Components;
    *
    * @author evalcode.net
    *
-   * @see Binding_Module
-   * @see Binding_Provider
-   * @see Binding_Annotation
+   * @see Components.Binding_Module
+   * @see Components.Binding_Provider
+   * @see Components.Annotation_Binding
    */
-  final class Injector implements Object
+  class Injector implements Object
   {
     // CONSTRUCTION
     private function __construct(Binding_Module $module_)
@@ -62,9 +62,9 @@ namespace Components;
      * the new instance will be declared as root injector implicitly.
      * </p>
      *
-     * @param Binding_Module $module_
+     * @param \Components\Binding_Module $module_
      *
-     * @return Injector
+     * @return \Components\Injector
      */
     public static function create(Binding_Module $module_)
     {
@@ -72,7 +72,7 @@ namespace Components;
       {
         self::initialize();
 
-        return self::$m_instance=new self($module_);
+        return self::$m_instance=new static($module_);
       }
 
       return self::$m_instance->createChild($module_);
@@ -81,7 +81,7 @@ namespace Components;
     /**
      * Returns root injector if exists, otherwise null.
      *
-     * @return Injector
+     * @return \Components\Injector
      */
     public static function getRoot()
     {
@@ -133,7 +133,7 @@ namespace Components;
      *
      * @param mixed $object_
      *
-     * @throws Binding_Exception If given object depends on unbound types.
+     * @throws \Components\Binding_Exception If given object depends on unbound types.
      */
     public function injectMembers($object_)
     {
@@ -183,7 +183,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws Binding_Exception If given type is not bound.
+     * @throws \Components\Binding_Exception If given type is not bound.
      */
     public function createInstance($type_)
     {
@@ -193,7 +193,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->createInstance($type_);
 
-      throw new Binding_Exception('inject/injector', sprintf(
+      throw new Binding_Exception('components/inject/injector', sprintf(
         'Type not bound [type: %1$s].', $type_
       ));
     }
@@ -314,7 +314,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws Binding_Exception If given type and/or name is not bound.
+     * @throws \Components\Binding_Exception If given type and/or name is not bound.
      */
     public function resolveInstance($type_, $name_=null)
     {
@@ -327,7 +327,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->resolveInstance($type_, $name_);
 
-      throw new Binding_Exception('inject/injector', sprintf(
+      throw new Binding_Exception('components/inject/injector', sprintf(
         'Type and/or name not bound [type: %1$s, name: %2$s].', $type_, $name_
       ));
     }
@@ -428,9 +428,9 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return Binding_Provider
+     * @return \Components\Binding_Provider
      *
-     * @throws Binding_Exception If given type is not bound to a provider.
+     * @throws \Components\Binding_Exception If given type is not bound to a provider.
      */
     public function getProvider($type_)
     {
@@ -440,7 +440,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent($type_);
 
-      throw new Binding_Exception('inject/injector', sprintf(
+      throw new Binding_Exception('components/inject/injector', sprintf(
         'No provider bound for given type [type: %1$s].', $type_
       ));
     }
@@ -479,13 +479,13 @@ namespace Components;
      *   $baaInjector->createInstance('My_Baa');
      * </code>
      *
-     * @param Binding_Module
+     * @param \Components\Binding_Module
      *
-     * @return Injector
+     * @return \Components\Injector
      */
     public function createChild(Binding_Module $module_)
     {
-      $injector=new self($module_);
+      $injector=new static($module_);
       $injector->m_parent=$this;
 
       return $injector;
@@ -501,7 +501,7 @@ namespace Components;
      *   $a===$b->getParent();
      * </code>
      *
-     * @return Injector
+     * @return \Components\Injector
      */
     public function getParent()
     {
@@ -510,12 +510,20 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // OVERRIDES/IMPLEMENTS
+    // OVERRIDES
+    /**
+     * (non-PHPdoc)
+     * @see Components.Object::hashCode()
+     */
     public function hashCode()
     {
-      return spl_object_hash($this);
+      return object_hash($this);
     }
 
+    /**
+     * (non-PHPdoc)
+     * @see Components.Object::equals()
+     */
     public function equals($object_)
     {
       if($object_ instanceof self)
@@ -524,6 +532,10 @@ namespace Components;
       return false;
     }
 
+    /**
+     * (non-PHPdoc)
+     * @see Components.Object::__toString()
+     */
     public function __toString()
     {
       return sprintf('%s@%s{module: %s}',
@@ -539,7 +551,7 @@ namespace Components;
     /**
      * Instance of root injector.
      *
-     * @var Injector
+     * @var \Components\Injector
      */
     private static $m_instance;
     /**
@@ -563,13 +575,13 @@ namespace Components;
     /**
      * Binding module corresponding to this injector.
      *
-     * @var Binding_Module
+     * @var \Components\Binding_Module
      */
     private $m_module;
     /**
      * Parent injector if available.
      *
-     * @var Injector
+     * @var \Components\Injector
      */
     private $m_parent;
     //-----
@@ -608,7 +620,7 @@ namespace Components;
     /**
      * Resolves instance for given binding.
      *
-     * @param Binding_Type_Abstract $binding_
+     * @param \Components\Binding_Type_Abstract $binding_
      *
      * @return mixed
      */
@@ -619,7 +631,7 @@ namespace Components;
       if($binding_->isPrimitive())
         return $instance;
 
-      $instanceId=spl_object_hash($instance);
+      $instanceId=object_hash($instance);
       if(isset($this->m_injectedInstances[$instanceId]))
         return $this->m_injectedInstances[$instanceId];
 
@@ -633,11 +645,11 @@ namespace Components;
     /**
      * Resolves binding for given set of binding annotations.
      *
-     * @param array|Binding_Annotation $annotations_
+     * @param array|\Components\Binding_Annotation $annotations_
      *
-     * @return Binding_Type_Abstract
+     * @return \Components\Binding_Type_Abstract
      *
-     * @throws Binding_Exception
+     * @throws \Components\Binding_Exception
      */
     private function getBindingForAnnotations(array $annotations_)
     {
@@ -654,7 +666,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->getBindingForAnnotations($annotations_);
 
-      throw new Binding_Exception('inject/injector', sprintf(
+      throw new Binding_Exception('components/inject/injector', sprintf(
         'Not bound [type: %1$s, name: %2$s].', $type, $name
       ));
     }

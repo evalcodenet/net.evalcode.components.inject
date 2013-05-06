@@ -17,7 +17,7 @@ namespace Components;
    * </p>
    *
    * @package net.evalcode.components
-   * @subpackage inject.annotation
+   * @subpackage annotation
    *
    * @author evalcode.net
    *
@@ -35,7 +35,7 @@ namespace Components;
    * Annotation_Binding_Provider
    *
    * @package net.evalcode.components
-   * @subpackage inject.annotation
+   * @subpackage annotation
    *
    * @author evalcode.net
    */

@@ -46,7 +46,7 @@ namespace Components;
    *
    * @author evalcode.net
    */
-  final class Binding_Type_Provider extends Binding_Type_Abstract
+  class Binding_Type_Provider extends Binding_Type_Abstract
   {
     // CONSTRUCTION
     public function __construct($type_, $provider_, $isPrimitive_)

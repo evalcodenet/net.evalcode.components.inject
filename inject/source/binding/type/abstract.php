@@ -20,7 +20,7 @@ namespace Components;
    * @see Components.Binding_Type_Instance
    * @see Components.Binding_Type_Provider
    */
-  abstract class Binding_Type_Abstract implements Binding_Type, Object
+  abstract class Binding_Type_Abstract implements Binding_Type
   {
     // CONSTRUCTION
     public function __construct($type_, $targetType_, $isPrimitive_)
@@ -95,8 +95,9 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // OVERRIDES/IMPLEMENTS
+    // OVERRIDES
     /**
+     * (non-PHPdoc)
      * @see Components.Binding_Type::named()
      */
     public function named($name_)
@@ -107,6 +108,7 @@ namespace Components;
     }
 
     /**
+     * (non-PHPdoc)
      * @see Components.Binding_Type::asSingleton()
      */
     public function asSingleton()
@@ -121,28 +123,31 @@ namespace Components;
      * this key as the bindings hashcode for identification in binding
      * configuration.
      *
+     * (non-PHPdoc)
      * @see Components.Object::hashCode()
      */
     public function hashCode()
     {
-      if(null===$this->m_hashCode || null===$this->m_name)
+      if(null===$this->m_hashCode)
         $this->m_hashCode=Binding_Builder::createHashCode($this->m_type, $this->m_name);
 
       return $this->m_hashCode;
     }
 
     /**
+     * (non-PHPdoc)
      * @see Components.Object::equals()
      */
     public function equals($object_)
     {
-      if($object_ instanceof static)
+      if($object_ instanceof self)
         return $this->hashCode()===$object_->hashCode();
 
       return false;
     }
 
     /**
+     * (non-PHPdoc)
      * @see Components.Object::__toString()
      */
     public function __toString()

@@ -38,7 +38,7 @@ namespace Components;
     /**
      * Initializes binding configuration.
      *
-     * @param Injector $injector_
+     * @param \Components\Injector $injector_
      */
     public function initialize(Injector $injector_)
     {
@@ -57,9 +57,9 @@ namespace Components;
      * @param string $type_
      * @param string $name_
      *
-     * @return Binding_Type_Abstract
+     * @return \Components\Binding_Type_Abstract
      *
-     * @throws Binding_Exception If failed to resolve binding.
+     * @throws \Components\Binding_Exception If failed to resolve binding.
      */
     public function getBinding($type_, $name_=null)
     {
@@ -77,7 +77,7 @@ namespace Components;
       }
 
       if(false===$this->m_initialized)
-        throw new Binding_Exception('binding/module', 'Not initialized.');
+        throw new Binding_Exception('components/inject/binding/module', 'Not initialized.');
 
       return null;
     }
@@ -87,7 +87,7 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return Binding_Type_Abstract
+     * @return \Components\Binding_Type_Abstract
      */
     public function getBindingForType($type_)
     {
@@ -99,27 +99,30 @@ namespace Components;
     //--------------------------------------------------------------------------
 
 
-    // OVERRIDES/IMPLEMENTS
+    // OVERRIDES
     /**
+     * (non-PHPdoc)
      * @see Components.Object::hashCode()
      */
     public function hashCode()
     {
-      return spl_object_hash($this);
+      return string_hash(get_class($this));
     }
 
     /**
+     * (non-PHPdoc)
      * @see Components.Object::equals()
      */
     public function equals($object_)
     {
-      if($object_ instanceof static)
+      if($object_ instanceof self)
         return $this->hashCode()===$object_->hashCode();
 
       return false;
     }
 
     /**
+     * (non-PHPdoc)
      * @see Components.Object::__toString()
      */
     public function __toString()
@@ -144,13 +147,13 @@ namespace Components;
     /**
      * Binding builders created internally during configuration.
      *
-     * @var array|Binding_Builder
+     * @var array|\Components\Binding_Builder
      */
     private $m_builders=array();
     /**
      * Bindings created during configuration.
      *
-     * @var array|Binding_Type_Abstract
+     * @var array|\Components\Binding_Type_Abstract
      */
     private $m_bindings=array();
     /**
@@ -173,7 +176,7 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return Binding_Builder
+     * @return \Components\Binding_Builder
      */
     protected function bind($type_)
     {
@@ -187,11 +190,11 @@ namespace Components;
     /**
      * Initiates binding configuration and adds built-in default bindings.
      *
-     * @param Injector $injector_
+     * @param \Components\Injector $injector_
      */
     private function configureImpl(Injector $injector_)
     {
-      $this->bind('Injector')->toInstance($injector_);
+      $this->bind('\\Components\\Injector')->toInstance($injector_);
 
       $this->configure();
     }
@@ -199,7 +202,7 @@ namespace Components;
     /**
      * Creates index of bound types/names for validation and performance.
      *
-     * @throws Binding_Exception
+     * @throws \Components\Binding_Exception
      */
     private function index()
     {
@@ -209,7 +212,7 @@ namespace Components;
 
         if(isset($this->m_bindings[$binding->hashCode()]))
         {
-          throw new Binding_Exception('binding/module',
+          throw new Binding_Exception('components/inject/binding/module',
             sprintf('Already bound [%s].', $binding)
           );
         }
