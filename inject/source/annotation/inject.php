@@ -16,11 +16,11 @@ namespace Components;
   {
     // PREDEFINED PROPERTIES
     /**
-     * Inject
+     * inject
      *
      * @var string
      */
-    const NAME='Inject';
+    const NAME='inject';
     /**
      * Annotation_Inject
      *

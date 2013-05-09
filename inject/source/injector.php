@@ -62,9 +62,9 @@ namespace Components;
      * the new instance will be declared as root injector implicitly.
      * </p>
      *
-     * @param \Components\Binding_Module $module_
+     * @param Components\Binding_Module $module_
      *
-     * @return \Components\Injector
+     * @return Components\Injector
      */
     public static function create(Binding_Module $module_)
     {
@@ -81,7 +81,7 @@ namespace Components;
     /**
      * Returns root injector if exists, otherwise null.
      *
-     * @return \Components\Injector
+     * @return Components\Injector
      */
     public static function getRoot()
     {
@@ -133,7 +133,7 @@ namespace Components;
      *
      * @param mixed $object_
      *
-     * @throws \Components\Binding_Exception If given object depends on unbound types.
+     * @throws Components\Binding_Exception If given object depends on unbound types.
      */
     public function injectMembers($object_)
     {
@@ -183,7 +183,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws \Components\Binding_Exception If given type is not bound.
+     * @throws Components\Binding_Exception If given type is not bound.
      */
     public function createInstance($type_)
     {
@@ -314,7 +314,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws \Components\Binding_Exception If given type and/or name is not bound.
+     * @throws Components\Binding_Exception If given type and/or name is not bound.
      */
     public function resolveInstance($type_, $name_=null)
     {
@@ -428,9 +428,9 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return \Components\Binding_Provider
+     * @return Components\Binding_Provider
      *
-     * @throws \Components\Binding_Exception If given type is not bound to a provider.
+     * @throws Components\Binding_Exception If given type is not bound to a provider.
      */
     public function getProvider($type_)
     {
@@ -479,9 +479,9 @@ namespace Components;
      *   $baaInjector->createInstance('My_Baa');
      * </code>
      *
-     * @param \Components\Binding_Module
+     * @param Components\Binding_Module
      *
-     * @return \Components\Injector
+     * @return Components\Injector
      */
     public function createChild(Binding_Module $module_)
     {
@@ -501,7 +501,7 @@ namespace Components;
      *   $a===$b->getParent();
      * </code>
      *
-     * @return \Components\Injector
+     * @return Components\Injector
      */
     public function getParent()
     {
@@ -551,7 +551,7 @@ namespace Components;
     /**
      * Instance of root injector.
      *
-     * @var \Components\Injector
+     * @var Components\Injector
      */
     private static $m_instance;
     /**
@@ -575,13 +575,13 @@ namespace Components;
     /**
      * Binding module corresponding to this injector.
      *
-     * @var \Components\Binding_Module
+     * @var Components\Binding_Module
      */
     private $m_module;
     /**
      * Parent injector if available.
      *
-     * @var \Components\Injector
+     * @var Components\Injector
      */
     private $m_parent;
     //-----
@@ -620,7 +620,7 @@ namespace Components;
     /**
      * Resolves instance for given binding.
      *
-     * @param \Components\Binding_Type_Abstract $binding_
+     * @param Components\Binding_Type_Abstract $binding_
      *
      * @return mixed
      */
@@ -645,11 +645,11 @@ namespace Components;
     /**
      * Resolves binding for given set of binding annotations.
      *
-     * @param array|\Components\Binding_Annotation $annotations_
+     * @param array|Components\Binding_Annotation $annotations_
      *
-     * @return \Components\Binding_Type_Abstract
+     * @return Components\Binding_Type_Abstract
      *
-     * @throws \Components\Binding_Exception
+     * @throws Components\Binding_Exception
      */
     private function getBindingForAnnotations(array $annotations_)
     {

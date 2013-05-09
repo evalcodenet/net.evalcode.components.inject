@@ -67,9 +67,9 @@ namespace Components;
      *
      * @param mixed $implementationType_
      *
-     * @return \Components\Binding_Type
+     * @return Components\Binding_Type
      *
-     * @throws \Components\Binding_Exception If requested binding is corrupt.
+     * @throws Components\Binding_Exception If requested binding is corrupt.
      */
     public function to($implementationType_)
     {
@@ -95,7 +95,7 @@ namespace Components;
      *
      * @param mixed $instance_
      *
-     * @return \Components\Binding_Type
+     * @return Components\Binding_Type
      */
     public function toInstance($instance_)
     {
@@ -114,9 +114,9 @@ namespace Components;
     /**
      * Binds to given provider of an implementation instance.
      *
-     * @param string|\Components\Binding_Provider $provider_
+     * @param string|Components\Binding_Provider $provider_
      *
-     * @return \Components\Binding_Type
+     * @return Components\Binding_Type
      */
     public function toProvider($provider_)
     {
@@ -135,7 +135,7 @@ namespace Components;
     /**
      * Returns configured binding.
      *
-     * @return \Components\Binding_Type_Abstract
+     * @return Components\Binding_Type_Abstract
      */
     public function getBinding()
     {
@@ -157,7 +157,7 @@ namespace Components;
     /**
      * Configured binding.
      *
-     * @var \Components\Binding_Type_Abstract
+     * @var Components\Binding_Type_Abstract
      */
     private $m_binding;
     /**

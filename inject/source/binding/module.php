@@ -38,7 +38,7 @@ namespace Components;
     /**
      * Initializes binding configuration.
      *
-     * @param \Components\Injector $injector_
+     * @param Components\Injector $injector_
      */
     public function initialize(Injector $injector_)
     {
@@ -57,9 +57,9 @@ namespace Components;
      * @param string $type_
      * @param string $name_
      *
-     * @return \Components\Binding_Type_Abstract
+     * @return Components\Binding_Type_Abstract
      *
-     * @throws \Components\Binding_Exception If failed to resolve binding.
+     * @throws Components\Binding_Exception If failed to resolve binding.
      */
     public function getBinding($type_, $name_=null)
     {
@@ -87,7 +87,7 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return \Components\Binding_Type_Abstract
+     * @return Components\Binding_Type_Abstract
      */
     public function getBindingForType($type_)
     {
@@ -147,13 +147,13 @@ namespace Components;
     /**
      * Binding builders created internally during configuration.
      *
-     * @var array|\Components\Binding_Builder
+     * @var array|Components\Binding_Builder
      */
     private $m_builders=array();
     /**
      * Bindings created during configuration.
      *
-     * @var array|\Components\Binding_Type_Abstract
+     * @var array|Components\Binding_Type_Abstract
      */
     private $m_bindings=array();
     /**
@@ -176,7 +176,7 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return \Components\Binding_Builder
+     * @return Components\Binding_Builder
      */
     protected function bind($type_)
     {
@@ -190,11 +190,11 @@ namespace Components;
     /**
      * Initiates binding configuration and adds built-in default bindings.
      *
-     * @param \Components\Injector $injector_
+     * @param Components\Injector $injector_
      */
     private function configureImpl(Injector $injector_)
     {
-      $this->bind('\\Components\\Injector')->toInstance($injector_);
+      $this->bind('Components\\Injector')->toInstance($injector_);
 
       $this->configure();
     }
@@ -202,7 +202,7 @@ namespace Components;
     /**
      * Creates index of bound types/names for validation and performance.
      *
-     * @throws \Components\Binding_Exception
+     * @throws Components\Binding_Exception
      */
     private function index()
     {

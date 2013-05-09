@@ -16,11 +16,11 @@ namespace Components;
   {
     // PREDEFINED PROPERTIES
     /**
-     * Named
+     * named
      *
      * @var string
      */
-    const NAME='Named';
+    const NAME='named';
     /**
      * Annotation_Named
      *

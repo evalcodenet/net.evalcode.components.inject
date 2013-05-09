@@ -43,11 +43,11 @@ namespace Components;
   {
     // PREDEFINED PROPERTIES
     /**
-     * Provider
+     * provider
      *
      * @var string
      */
-    const NAME='Provider';
+    const NAME='provider';
     /**
      * Annotation_Binding_Provider
      *

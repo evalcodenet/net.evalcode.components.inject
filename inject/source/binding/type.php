@@ -38,14 +38,14 @@ namespace Components;
      *
      * @param string $name_
      *
-     * @return \Components\Binding_Type
+     * @return Components\Binding_Type
      */
     function named($name_);
 
     /**
      * Configure as singleton.
      *
-     * @return \Components\Binding_Type
+     * @return Components\Binding_Type
      */
     function asSingleton();
     //--------------------------------------------------------------------------
