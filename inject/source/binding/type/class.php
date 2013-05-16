@@ -54,7 +54,7 @@ namespace Components;
      * Initializes instance of bound imlementation and caches it in case it is
      * bound as singleton. Returns instance of bound implementation
      *
-     * @see Components.Binding_Type_Abstract::getInstance()
+     * @see Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */

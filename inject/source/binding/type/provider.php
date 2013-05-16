@@ -71,7 +71,7 @@ namespace Components;
      * Initializes instance of bound provider and caches it in case it is
      * bound as singleton. Returns instance of provider.
      *
-     * @return Components\Binding_Provider
+     * @return \Components\Binding_Provider
      */
     public function getProvider()
     {
@@ -92,7 +92,7 @@ namespace Components;
     /**
      * Resolves instance via bound provider.
      *
-     * @see Components.Binding_Type_Abstract::getInstance()
+     * @see Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */

@@ -16,9 +16,9 @@ namespace Components;
    *
    * @author evalcode.net
    *
-   * @see Components.Binding_Type_Class
-   * @see Components.Binding_Type_Instance
-   * @see Components.Binding_Type_Provider
+   * @see Components\Binding_Type_Class
+   * @see Components\Binding_Type_Instance
+   * @see Components\Binding_Type_Provider
    */
   abstract class Binding_Type_Abstract implements Binding_Type
   {
@@ -98,7 +98,7 @@ namespace Components;
     // OVERRIDES
     /**
      * (non-PHPdoc)
-     * @see Components.Binding_Type::named()
+     * @see Components\Binding_Type::named()
      */
     public function named($name_)
     {
@@ -109,7 +109,7 @@ namespace Components;
 
     /**
      * (non-PHPdoc)
-     * @see Components.Binding_Type::asSingleton()
+     * @see Components\Binding_Type::asSingleton()
      */
     public function asSingleton()
     {
@@ -124,7 +124,7 @@ namespace Components;
      * configuration.
      *
      * (non-PHPdoc)
-     * @see Components.Object::hashCode()
+     * @see Components\Object::hashCode()
      */
     public function hashCode()
     {
@@ -136,7 +136,7 @@ namespace Components;
 
     /**
      * (non-PHPdoc)
-     * @see Components.Object::equals()
+     * @see Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -148,7 +148,7 @@ namespace Components;
 
     /**
      * (non-PHPdoc)
-     * @see Components.Object::__toString()
+     * @see Components\Object::__toString()
      */
     public function __toString()
     {
@@ -183,7 +183,7 @@ namespace Components;
      *
      * @var string
      *
-     * @see Components.Binding_Type_Abstract::hashCode()
+     * @see Components\Binding_Type_Abstract::hashCode()
      */
     protected $m_hashCode;
     /**

@@ -21,9 +21,9 @@ namespace Components;
    *
    * @author evalcode.net
    *
-   * @see Components.Annotation_Binding_Provider
-   * @see Components.Annotation_Inject
-   * @see Components.Annotation_Named
+   * @see Components\Annotation_Binding_Provider
+   * @see Components\Annotation_Inject
+   * @see Components\Annotation_Named
    */
   abstract class Annotation_Binding extends Annotation
   {

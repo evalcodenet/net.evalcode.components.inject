@@ -33,9 +33,9 @@ namespace Components;
    *
    * @author evalcode.net
    *
-   * @see Components.Binding_Module
-   * @see Components.Binding_Provider
-   * @see Components.Annotation_Binding
+   * @see Components\Binding_Module
+   * @see Components\Binding_Provider
+   * @see Components\Annotation_Binding
    */
   class Injector implements Object
   {
@@ -62,9 +62,9 @@ namespace Components;
      * the new instance will be declared as root injector implicitly.
      * </p>
      *
-     * @param Components\Binding_Module $module_
+     * @param \Components\Binding_Module $module_
      *
-     * @return Components\Injector
+     * @return \Components\Injector
      */
     public static function create(Binding_Module $module_)
     {
@@ -81,7 +81,7 @@ namespace Components;
     /**
      * Returns root injector if exists, otherwise null.
      *
-     * @return Components\Injector
+     * @return \Components\Injector
      */
     public static function getRoot()
     {
@@ -133,7 +133,7 @@ namespace Components;
      *
      * @param mixed $object_
      *
-     * @throws Components\Binding_Exception If given object depends on unbound types.
+     * @throws \Components\Binding_Exception If given object depends on unbound types.
      */
     public function injectMembers($object_)
     {
@@ -183,7 +183,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws Components\Binding_Exception If given type is not bound.
+     * @throws \Components\Binding_Exception If given type is not bound.
      */
     public function createInstance($type_)
     {
@@ -314,7 +314,7 @@ namespace Components;
      *
      * @return mixed
      *
-     * @throws Components\Binding_Exception If given type and/or name is not bound.
+     * @throws \Components\Binding_Exception If given type and/or name is not bound.
      */
     public function resolveInstance($type_, $name_=null)
     {
@@ -428,9 +428,9 @@ namespace Components;
      *
      * @param string $type_
      *
-     * @return Components\Binding_Provider
+     * @return \Components\Binding_Provider
      *
-     * @throws Components\Binding_Exception If given type is not bound to a provider.
+     * @throws \Components\Binding_Exception If given type is not bound to a provider.
      */
     public function getProvider($type_)
     {
@@ -479,9 +479,9 @@ namespace Components;
      *   $baaInjector->createInstance('My_Baa');
      * </code>
      *
-     * @param Components\Binding_Module
+     * @param \Components\Binding_Module
      *
-     * @return Components\Injector
+     * @return \Components\Injector
      */
     public function createChild(Binding_Module $module_)
     {
@@ -501,7 +501,7 @@ namespace Components;
      *   $a===$b->getParent();
      * </code>
      *
-     * @return Components\Injector
+     * @return \Components\Injector
      */
     public function getParent()
     {
@@ -513,7 +513,7 @@ namespace Components;
     // OVERRIDES
     /**
      * (non-PHPdoc)
-     * @see Components.Object::hashCode()
+     * @see Components\Object::hashCode()
      */
     public function hashCode()
     {
@@ -522,7 +522,7 @@ namespace Components;
 
     /**
      * (non-PHPdoc)
-     * @see Components.Object::equals()
+     * @see Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -534,7 +534,7 @@ namespace Components;
 
     /**
      * (non-PHPdoc)
-     * @see Components.Object::__toString()
+     * @see Components\Object::__toString()
      */
     public function __toString()
     {
@@ -620,7 +620,7 @@ namespace Components;
     /**
      * Resolves instance for given binding.
      *
-     * @param Components\Binding_Type_Abstract $binding_
+     * @param \Components\Binding_Type_Abstract $binding_
      *
      * @return mixed
      */
@@ -647,9 +647,9 @@ namespace Components;
      *
      * @param array|Components\Binding_Annotation $annotations_
      *
-     * @return Components\Binding_Type_Abstract
+     * @return \Components\Binding_Type_Abstract
      *
-     * @throws Components\Binding_Exception
+     * @throws \Components\Binding_Exception
      */
     private function getBindingForAnnotations(array $annotations_)
     {
