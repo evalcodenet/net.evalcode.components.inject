@@ -193,7 +193,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->createInstance($type_);
 
-      throw new Binding_Exception('components/inject/injector', sprintf(
+      throw new Binding_Exception('inject/injector', sprintf(
         'Type not bound [type: %1$s].', $type_
       ));
     }
@@ -327,7 +327,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->resolveInstance($type_, $name_);
 
-      throw new Binding_Exception('components/inject/injector', sprintf(
+      throw new Binding_Exception('inject/injector', sprintf(
         'Type and/or name not bound [type: %1$s, name: %2$s].', $type_, $name_
       ));
     }
@@ -440,7 +440,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent($type_);
 
-      throw new Binding_Exception('components/inject/injector', sprintf(
+      throw new Binding_Exception('inject/injector', sprintf(
         'No provider bound for given type [type: %1$s].', $type_
       ));
     }
@@ -666,7 +666,7 @@ namespace Components;
       if(null!==$this->m_parent)
         return $this->m_parent->getBindingForAnnotations($annotations_);
 
-      throw new Binding_Exception('components/inject/injector', sprintf(
+      throw new Binding_Exception('inject/injector', sprintf(
         'Not bound [type: %1$s, name: %2$s].', $type, $name
       ));
     }

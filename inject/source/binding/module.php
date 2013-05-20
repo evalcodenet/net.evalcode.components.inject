@@ -77,7 +77,7 @@ namespace Components;
       }
 
       if(false===$this->m_initialized)
-        throw new Binding_Exception('components/inject/binding/module', 'Not initialized.');
+        throw new Binding_Exception('inject/binding/module', 'Not initialized.');
 
       return null;
     }
@@ -212,7 +212,7 @@ namespace Components;
 
         if(isset($this->m_bindings[$binding->hashCode()]))
         {
-          throw new Binding_Exception('components/inject/binding/module',
+          throw new Binding_Exception('inject/binding/module',
             sprintf('Already bound [%s].', $binding)
           );
         }
