@@ -11,7 +11,7 @@ namespace Components;
    *   API for custom instance provider implementations.
    * </p>
    *
-   * <code>
+   * <pre>
    *   My_Binding_Module extends Binding_Module
    *   {
    *     protected function configure()
@@ -64,7 +64,7 @@ namespace Components;
    *   // ... yet make sure to close them all at the end.
    *   foreach($injector->getProvider('Connection')->getConnections() as $connection)
    *     $connection->close();
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding

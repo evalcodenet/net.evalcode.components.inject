@@ -11,7 +11,7 @@ namespace Components;
    *   Holds type & provider bindings to configure an Injector.
    * </p>
    *
-   * <code>
+   * <pre>
    *   // Examplary binding module implementation.
    *   My_Binding_Module extends Binding_Module
    *   {
@@ -25,7 +25,7 @@ namespace Components;
    *   // Create instance of a bound type.
    *   $injector=Injector::create(new My_Binding_Module());
    *   $foo=$injector->createInstance('Foo');
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding
@@ -100,18 +100,14 @@ namespace Components;
 
 
     // OVERRIDES
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::hashCode()
+    /**     * @see Components\Object::hashCode() Components\Object::hashCode()
      */
     public function hashCode()
     {
       return string_hash(get_class($this));
     }
 
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::equals()
+    /**     * @see Components\Object::equals() Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -121,9 +117,7 @@ namespace Components;
       return false;
     }
 
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::__toString()
+    /**     * @see Components\Object::__toString() Components\Object::__toString()
      */
     public function __toString()
     {

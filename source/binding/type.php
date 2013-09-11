@@ -12,7 +12,7 @@ namespace Components;
    *   binding configuration.
    * </p>
    *
-   * <code>
+   * <pre>
    *   My_Binding_Module extends Binding_Module
    *   {
    *     protected function configure()
@@ -23,7 +23,7 @@ namespace Components;
    *         ->asSingleton();
    *     }
    *   }
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding

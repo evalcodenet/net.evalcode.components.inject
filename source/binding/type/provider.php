@@ -11,7 +11,7 @@ namespace Components;
    *   Binds types to custom instance provider implementations.
    * </p>
    *
-   * <code>
+   * <pre>
    *   // Custom provider implementation.
    *   class Foo_Binding_Provider implements Binding_Provider
    *   {
@@ -39,7 +39,7 @@ namespace Components;
    *       $this->bind('Foo')->toProvider(new Foo_Binding_Provider());
    *     }
    *   }
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding.type
@@ -92,7 +92,7 @@ namespace Components;
     /**
      * Resolves instance via bound provider.
      *
-     * @see Components\Binding_Type_Abstract::getInstance()
+     * @see Components\Binding_Type_Abstract::getInstance() Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */

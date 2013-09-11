@@ -44,7 +44,7 @@ namespace Components;
     /**
      * Returns key to identify configured binding for requested type and name.
      *
-     * @see Components\Binding_Type_Abstract::hashCode()
+     * @see Components\Binding_Type_Abstract::hashCode() Components\Binding_Type_Abstract::hashCode()
      *
      * @param string $type_
      * @param string $name_

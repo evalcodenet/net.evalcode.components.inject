@@ -11,7 +11,7 @@ namespace Components;
    *   Binds types to concrete instances.
    * </p>
    *
-   * <code>
+   * <pre>
    *   // Corresponding binding module configuration.
    *   class Binding_Module_Impl extends Binding_Module
    *   {
@@ -31,7 +31,7 @@ namespace Components;
    *         ->named('development');
    *     }
    *   }
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding.type

@@ -11,7 +11,7 @@ namespace Components;
    *   Binds types to implementations by their type names.
    * </p>
    *
-   * <code>
+   * <pre>
    *   // Corresponding binding module configuration.
    *   class Binding_Module_Impl extends Binding_Module
    *   {
@@ -32,7 +32,7 @@ namespace Components;
    *         ->asSingleton();
    *     }
    *   }
-   * </code>
+   * </pre>
    *
    * @package net.evalcode.components
    * @subpackage inject.binding.type
@@ -54,7 +54,7 @@ namespace Components;
      * Initializes instance of bound imlementation and caches it in case it is
      * bound as singleton. Returns instance of bound implementation
      *
-     * @see Components\Binding_Type_Abstract::getInstance()
+     * @see Components\Binding_Type_Abstract::getInstance() Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */

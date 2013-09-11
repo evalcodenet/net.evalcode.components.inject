@@ -11,7 +11,7 @@ namespace Components;
    *   Dependency injection provider.
    * </p>
    *
-   * <code>
+   * <pre>
    *   // Implement a Binding_Module to configure & create an Injector.
    *   My_Binding_Module extends Binding_Module
    *   {
@@ -26,16 +26,18 @@ namespace Components;
    *   // Create instance of a bound type.
    *   $injector=Injector::create(new My_Binding_Module());
    *   $injector->createInstance('Foo_Type');
-   * </code>
+   * </pre>
+   *
+   * @api
    *
    * @package net.evalcode.components
    * @subpackage inject
    *
    * @author evalcode.net
    *
-   * @see Components\Binding_Module
-   * @see Components\Binding_Provider
-   * @see Components\Annotation_Binding
+   * @see \Components\Binding_Module \Components\Binding_Module
+   * @see \Components\Binding_Provider \Components\Binding_Provider
+   * @see \Components\Annotation_Binding \Components\Annotation_Binding
    */
   class Injector implements Object
   {
@@ -94,7 +96,7 @@ namespace Components;
     /**
      * Injects dependencies into given instance.
      *
-     * <code>
+     * <pre>
      *   My_Foo
      *   {
      *      /**
@@ -129,7 +131,7 @@ namespace Components;
      *
      *   // Prints 'Hello World!'
      *   $foo->baa->printGreeting();
-     * </code>
+     * </pre>
      *
      * @param mixed $object_
      *
@@ -143,7 +145,7 @@ namespace Components;
     /**
      * Creates instance of given type and resolves its dependencies.
      *
-     * <code>
+     * <pre>
      *   My_Foo
      *   {
      *      /**
@@ -177,7 +179,7 @@ namespace Components;
      *   // Prints 'Hello World!'
      *   $injector->createInstance('My_Foo')->baa->printGreeting();
      *   $injector->createInstance('My_Baa')->printGreeting();
-     * </code>
+     * </pre>
      *
      * @param string $type_
      *
@@ -207,7 +209,7 @@ namespace Components;
      * e.g. configuration parameters:
      * </p>
      *
-     * <code>
+     * <pre>
      *   My_Binding_Module extends Binding_Module
      *   {
      *     protected function configure()
@@ -265,9 +267,9 @@ namespace Components;
      *    * &#064;return 80
      *    {@*}
      *   $configuration->getPort();
-     * </code>
+     * </pre>
      *
-     * <code>
+     * <pre>
      *   My_Binding_Module extends Binding_Module
      *   {
      *     protected function configure()
@@ -307,7 +309,7 @@ namespace Components;
      *    {@*}
      *   $c->equals($d);
      *   $d->equals($c);
-     * </code>
+     * </pre>
      *
      * @param string $type_
      * @param string $name_
@@ -335,7 +337,7 @@ namespace Components;
     /**
      * Resolves provider for given type.
      *
-     * <code>
+     * <pre>
      *   My_Provider implements Binding_Provider
      *   {
      *     public function get()
@@ -424,7 +426,7 @@ namespace Components;
      *   // ... or via bound provider.
      *   $baa=$injector->getProvider('My_Baa')->get();
      *   $baa=$injector->createInstance('My_Foo')->providerBaa->get();
-     * </code>
+     * </pre>
      *
      * @param string $type_
      *
@@ -448,7 +450,7 @@ namespace Components;
     /**
      * Creates & appends an child injector for given binding module.
      *
-     * <code>
+     * <pre>
      *   Foo_Binding_Module extends Binding_Module
      *   {
      *     protected function configure()
@@ -477,7 +479,7 @@ namespace Components;
      *   $baaInjector->createInstance('My_Foo');
      *   // Creates instance of My_Baa_Impl.
      *   $baaInjector->createInstance('My_Baa');
-     * </code>
+     * </pre>
      *
      * @param \Components\Binding_Module
      *
@@ -494,12 +496,12 @@ namespace Components;
     /**
      * Returns parent injector if one exists, otherwise null.
      *
-     * <code>
+     * <pre>
      *   $a=Injector::create([Binding_Module]);
      *   $b=$aInjector->createChild([Binding_Module]);
      *
      *   $a===$b->getParent();
-     * </code>
+     * </pre>
      *
      * @return \Components\Injector
      */
@@ -511,18 +513,14 @@ namespace Components;
 
 
     // OVERRIDES
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::hashCode()
+    /**     * @see Components\Object::hashCode() Components\Object::hashCode()
      */
     public function hashCode()
     {
       return object_hash($this);
     }
 
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::equals()
+    /**     * @see Components\Object::equals() Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -532,9 +530,7 @@ namespace Components;
       return false;
     }
 
-    /**
-     * (non-PHPdoc)
-     * @see Components\Object::__toString()
+    /**     * @see Components\Object::__toString() Components\Object::__toString()
      */
     public function __toString()
     {
