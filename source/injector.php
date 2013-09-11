@@ -28,8 +28,6 @@ namespace Components;
    *   $injector->createInstance('Foo_Type');
    * </pre>
    *
-   * @api
-   *
    * @package net.evalcode.components
    * @subpackage inject
    *
