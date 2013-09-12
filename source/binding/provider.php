@@ -66,8 +66,9 @@ namespace Components;
    *     $connection->close();
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding
+   * @api
+   * @package net.evalcode.components.inject
+   * @subpackage binding
    *
    * @author evalcode.net
    */

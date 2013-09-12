@@ -11,8 +11,8 @@ namespace Components;
    *   Internal implementation of Binding_Module::bind().
    * </p>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding
+   * @package net.evalcode.components.inject
+   * @subpackage binding
    *
    * @author evalcode.net
    */
@@ -44,7 +44,7 @@ namespace Components;
     /**
      * Returns key to identify configured binding for requested type and name.
      *
-     * @see Components\Binding_Type_Abstract::hashCode() Components\Binding_Type_Abstract::hashCode()
+     * @see \Components\Binding_Type_Abstract::hashCode() \Components\Binding_Type_Abstract::hashCode()
      *
      * @param string $type_
      * @param string $name_
@@ -157,7 +157,7 @@ namespace Components;
     /**
      * Configured binding.
      *
-     * @var Components\Binding_Type_Abstract
+     * @var \Components\Binding_Type_Abstract
      */
     private $m_binding;
     /**

@@ -41,8 +41,8 @@ namespace Components;
    *   }
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding.type
+   * @package net.evalcode.components.inject
+   * @subpackage binding.type
    *
    * @author evalcode.net
    */
@@ -92,7 +92,7 @@ namespace Components;
     /**
      * Resolves instance via bound provider.
      *
-     * @see Components\Binding_Type_Abstract::getInstance() Components\Binding_Type_Abstract::getInstance()
+     * @see \Components\Binding_Type_Abstract::getInstance() \Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */
@@ -107,7 +107,7 @@ namespace Components;
     /**
      * Cached instance of bound provider.
      *
-     * @var Components\Binding_Provider
+     * @var \Components\Binding_Provider
      */
     private $m_provider;
     /**

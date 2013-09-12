@@ -7,7 +7,8 @@ namespace Components;
   /**
    * Annotation_Inject
    *
-   * @package net.evalcode.components
+   * @api
+   * @package net.evalcode.components.inject
    * @subpackage annotation
    *
    * @author evalcode.net

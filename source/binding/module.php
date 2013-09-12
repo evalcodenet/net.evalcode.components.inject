@@ -27,8 +27,9 @@ namespace Components;
    *   $foo=$injector->createInstance('Foo');
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding
+   * @api
+   * @package net.evalcode.components.inject
+   * @subpackage binding
    *
    * @author evalcode.net
    */
@@ -100,14 +101,16 @@ namespace Components;
 
 
     // OVERRIDES
-    /**     * @see Components\Object::hashCode() Components\Object::hashCode()
+    /**
+     * @see \Components\Object::hashCode() \Components\Object::hashCode()
      */
     public function hashCode()
     {
       return string_hash(get_class($this));
     }
 
-    /**     * @see Components\Object::equals() Components\Object::equals()
+    /**
+     * @see \Components\Object::equals() \Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -117,7 +120,8 @@ namespace Components;
       return false;
     }
 
-    /**     * @see Components\Object::__toString() Components\Object::__toString()
+    /**
+     * @see \Components\Object::__toString() \Components\Object::__toString()
      */
     public function __toString()
     {
@@ -141,19 +145,19 @@ namespace Components;
     /**
      * Binding builders created internally during configuration.
      *
-     * @var array|Components\Binding_Builder
+     * @var \Components\Binding_Builder[]
      */
     private $m_builders=array();
     /**
      * Bindings created during configuration.
      *
-     * @var array|Components\Binding_Type_Abstract
+     * @var \Components\Binding_Type_Abstract[]
      */
     private $m_bindings=array();
     /**
      * Index of bound types to enhance performance of binding lookups.
      *
-     * @var array|string
+     * @var string[]
      */
     private $m_boundTypes=array();
     //-----
@@ -165,8 +169,8 @@ namespace Components;
     protected abstract function configure();
 
 
-    /**
-     * Bind type for given name to ...
+  /**
+   * Bind type for given name to ...
      *
      * @param string $type_
      *

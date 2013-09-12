@@ -28,8 +28,7 @@ namespace Components;
    *   $injector->createInstance('Foo_Type');
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject
+   * @package net.evalcode.components.inject
    *
    * @author evalcode.net
    *
@@ -99,7 +98,7 @@ namespace Components;
      *   {
      *      /**
      *       * &#064;Inject(My_Baa)
-     *       {@*}
+     *       *\/
      *      public $baa;
      *   }
      *
@@ -148,7 +147,7 @@ namespace Components;
      *   {
      *      /**
      *       * &#064;Inject(My_Baa)
-     *       {@*}
+     *       *\/
      *      public $baa;
      *   }
      *
@@ -231,13 +230,13 @@ namespace Components;
      *      /**
      *       * &#064;Inject(integer);
      *       * &#064;Named(listen.host);
-     *       {@*}
+     *       *\/
      *      private $m_host;
      *
      *      /**
      *       * &#064;Inject(integer);
      *       * &#064;Named(listen.port);
-     *       {@*}
+     *       *\/
      *      private $m_port;
      *
      *
@@ -259,11 +258,11 @@ namespace Components;
      *
      *   /**
      *    * &#064;return 'localhost'
-     *    {@*}
+     *    *\/
      *   $configuration->getHost();
      *   /**
      *    * &#064;return 80
-     *    {@*}
+     *    *\/
      *   $configuration->getPort();
      * </pre>
      *
@@ -299,12 +298,12 @@ namespace Components;
      *
      *   /**
      *    * &#064;return false
-     *    {@*}
+     *    *\/
      *   $a->equals($b);
      *
      *   /**
      *    * &#064;return true
-     *    {@*}
+     *    *\/
      *   $c->equals($d);
      *   $d->equals($c);
      * </pre>
@@ -376,7 +375,7 @@ namespace Components;
      *      * Internally invokes bound provider and injects its return value.
      *      *
      *      * &#064;Inject(My_Baa)
-     *      {@*}
+     *      *\/
      *     public $baa;
      *
      *     /**
@@ -384,13 +383,13 @@ namespace Components;
      *      *
      *      * &#064;Inject(My_Baa)
      *      * &#064;Provider
-     *      {@*}
+     *      *\/
      *     public $providerBaa;
      *
      *
      *     /**
      *      * &#064;return My_Baa
-     *      {@*}
+     *      *\/
      *     public function getBaa0()
      *     {
      *       return $this->baa;
@@ -400,7 +399,7 @@ namespace Components;
      *
      *     /**
      *      * &#064;return My_Baa
-     *      {@*}
+     *      *\/
      *     public function getBaa1()
      *     {
      *       return $this->providerBaa->get();
@@ -511,14 +510,16 @@ namespace Components;
 
 
     // OVERRIDES
-    /**     * @see Components\Object::hashCode() Components\Object::hashCode()
+    /**
+     * @see \Components\Object::hashCode() \Components\Object::hashCode()
      */
     public function hashCode()
     {
       return object_hash($this);
     }
 
-    /**     * @see Components\Object::equals() Components\Object::equals()
+    /**
+     * @see \Components\Object::equals() \Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -528,7 +529,8 @@ namespace Components;
       return false;
     }
 
-    /**     * @see Components\Object::__toString() Components\Object::__toString()
+    /**
+     * @see \Components\Object::__toString() \Components\Object::__toString()
      */
     public function __toString()
     {
@@ -545,7 +547,7 @@ namespace Components;
     /**
      * Instance of root injector.
      *
-     * @var Components\Injector
+     * @var \Components\Injector
      */
     private static $m_instance;
     /**
@@ -557,25 +559,25 @@ namespace Components;
     /**
      * Local cache for known binding annotations.
      *
-     * @var array|string
+     * @var string[]
      */
     private $m_annotationCache=array();
     /**
      * Local cache for already initialized & injected instances.
      *
-     * @var array|mixed
+     * @var array
      */
     private $m_injectedInstances=array();
     /**
      * Binding module corresponding to this injector.
      *
-     * @var Components\Binding_Module
+     * @var \Components\Binding_Module
      */
     private $m_module;
     /**
      * Parent injector if available.
      *
-     * @var Components\Injector
+     * @var \Components\Injector
      */
     private $m_parent;
     //-----
@@ -639,7 +641,7 @@ namespace Components;
     /**
      * Resolves binding for given set of binding annotations.
      *
-     * @param array|Components\Binding_Annotation $annotations_
+     * @param \Components\Binding_Annotation[] $annotations_
      *
      * @return \Components\Binding_Type_Abstract
      *

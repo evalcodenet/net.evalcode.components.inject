@@ -34,8 +34,8 @@ namespace Components;
    *   }
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding.type
+   * @package net.evalcode.components.inject
+   * @subpackage binding.type
    *
    * @author evalcode.net
    */
@@ -54,7 +54,7 @@ namespace Components;
      * Initializes instance of bound imlementation and caches it in case it is
      * bound as singleton. Returns instance of bound implementation
      *
-     * @see Components\Binding_Type_Abstract::getInstance() Components\Binding_Type_Abstract::getInstance()
+     * @see \Components\Binding_Type_Abstract::getInstance() \Components\Binding_Type_Abstract::getInstance()
      *
      * @return mixed
      */

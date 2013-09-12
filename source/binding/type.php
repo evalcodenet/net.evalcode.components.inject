@@ -25,8 +25,8 @@ namespace Components;
    *   }
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding
+   * @package net.evalcode.components.inject
+   * @subpackage binding
    *
    * @author evalcode.net
    */
@@ -41,7 +41,6 @@ namespace Components;
      * @return \Components\Binding_Type
      */
     function named($name_);
-
     /**
      * Configure as singleton.
      *

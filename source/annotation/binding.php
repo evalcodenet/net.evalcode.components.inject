@@ -16,14 +16,15 @@ namespace Components;
    *   Root binding annotation
    * </p>
    *
-   * @package net.evalcode.components
+   * @api
+   * @package net.evalcode.components.inject
    * @subpackage annotation
    *
    * @author evalcode.net
    *
-   * @see Components\Annotation_Binding_Provider Components\Annotation_Binding_Provider
-   * @see Components\Annotation_Inject Components\Annotation_Inject
-   * @see Components\Annotation_Named Components\Annotation_Named
+   * @see \Components\Annotation_Binding_Provider \Components\Annotation_Binding_Provider
+   * @see \Components\Annotation_Inject \Components\Annotation_Inject
+   * @see \Components\Annotation_Named \Components\Annotation_Named
    */
   abstract class Annotation_Binding extends Annotation
   {
@@ -34,7 +35,8 @@ namespace Components;
   /**
    * Annotation_Binding_Provider
    *
-   * @package net.evalcode.components
+   * @api
+   * @package net.evalcode.components.inject
    * @subpackage annotation
    *
    * @author evalcode.net

@@ -11,14 +11,14 @@ namespace Components;
    *   Common binding implementation.
    * </p>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding.type
+   * @package net.evalcode.components.inject
+   * @subpackage binding.type
    *
    * @author evalcode.net
    *
-   * @see Components\Binding_Type_Class Components\Binding_Type_Class
-   * @see Components\Binding_Type_Instance Components\Binding_Type_Instance
-   * @see Components\Binding_Type_Provider Components\Binding_Type_Provider
+   * @see \Components\Binding_Type_Class \Components\Binding_Type_Class
+   * @see \Components\Binding_Type_Instance \Components\Binding_Type_Instance
+   * @see \Components\Binding_Type_Provider \Components\Binding_Type_Provider
    */
   abstract class Binding_Type_Abstract implements Binding_Type
   {
@@ -96,7 +96,8 @@ namespace Components;
 
 
     // OVERRIDES
-    /**     * @see Components\Binding_Type::named() Components\Binding_Type::named()
+    /**
+     * @see \Components\Binding_Type::named() \Components\Binding_Type::named()
      */
     public function named($name_)
     {
@@ -105,7 +106,8 @@ namespace Components;
       return $this;
     }
 
-    /**     * @see Components\Binding_Type::asSingleton() Components\Binding_Type::asSingleton()
+    /**
+     * @see \Components\Binding_Type::asSingleton() \Components\Binding_Type::asSingleton()
      */
     public function asSingleton()
     {
@@ -118,7 +120,7 @@ namespace Components;
      * The combination of binding type+name is unique, therefore we use
      * this key as the bindings hashcode for identification in binding
      * configuration.
-     *     * @see Components\Object::hashCode() Components\Object::hashCode()
+     *     * @see \Components\Object::hashCode() \Components\Object::hashCode()
      */
     public function hashCode()
     {
@@ -128,7 +130,8 @@ namespace Components;
       return $this->m_hashCode;
     }
 
-    /**     * @see Components\Object::equals() Components\Object::equals()
+    /**
+     * @see \Components\Object::equals() \Components\Object::equals()
      */
     public function equals($object_)
     {
@@ -138,7 +141,8 @@ namespace Components;
       return false;
     }
 
-    /**     * @see Components\Object::__toString() Components\Object::__toString()
+    /**
+     * @see \Components\Object::__toString() \Components\Object::__toString()
      */
     public function __toString()
     {
@@ -173,7 +177,7 @@ namespace Components;
      *
      * @var string
      *
-     * @see Components\Binding_Type_Abstract::hashCode() Components\Binding_Type_Abstract::hashCode()
+     * @see \Components\Binding_Type_Abstract::hashCode() \Components\Binding_Type_Abstract::hashCode()
      */
     protected $m_hashCode;
     /**

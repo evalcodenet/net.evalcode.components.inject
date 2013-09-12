@@ -11,8 +11,9 @@ namespace Components;
    *   Root exception for binding configuration & injection problems.
    * </p>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding
+   * @api
+   * @package net.evalcode.components.inject
+   * @subpackage binding
    *
    * @author evalcode.net
    */

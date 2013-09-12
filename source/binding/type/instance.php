@@ -33,8 +33,8 @@ namespace Components;
    *   }
    * </pre>
    *
-   * @package net.evalcode.components
-   * @subpackage inject.binding.type
+   * @package net.evalcode.components.inject
+   * @subpackage binding.type
    *
    * @author evalcode.net
    */
