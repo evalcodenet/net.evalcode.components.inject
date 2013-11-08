@@ -50,7 +50,7 @@ namespace Components;
    *
    *
    *     // IMPLEMENTATION
-   *     private $m_connections=array();
+   *     private $m_connections=[];
    *   }
    *
    *

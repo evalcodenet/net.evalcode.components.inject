@@ -561,13 +561,13 @@ namespace Components;
      *
      * @var string[]
      */
-    private $m_annotationCache=array();
+    private $m_annotationCache=[];
     /**
      * Local cache for already initialized & injected instances.
      *
      * @var array
      */
-    private $m_injectedInstances=array();
+    private $m_injectedInstances=[];
     /**
      * Binding module corresponding to this injector.
      *

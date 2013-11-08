@@ -147,19 +147,19 @@ namespace Components;
      *
      * @var \Components\Binding_Builder[]
      */
-    private $m_builders=array();
+    private $m_builders=[];
     /**
      * Bindings created during configuration.
      *
      * @var \Components\Binding_Type_Abstract[]
      */
-    private $m_bindings=array();
+    private $m_bindings=[];
     /**
      * Index of bound types to enhance performance of binding lookups.
      *
      * @var string[]
      */
-    private $m_boundTypes=array();
+    private $m_boundTypes=[];
     //-----
 
 
