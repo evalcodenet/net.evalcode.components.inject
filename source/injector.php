@@ -484,7 +484,7 @@ namespace Components;
      */
     public function createChild(Binding_Module $module_)
     {
-      $injector=new static($module_);
+      $injector=new self($module_);
       $injector->m_parent=$this;
 
       return $injector;

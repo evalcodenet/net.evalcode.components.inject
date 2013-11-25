@@ -92,7 +92,7 @@ namespace Components;
     /**
      * Resolves instance via bound provider.
      *
-     * @see \Components\Binding_Type_Abstract::getInstance() \Components\Binding_Type_Abstract::getInstance()
+     * @see \Components\Binding_Type_Abstract::getInstance() getInstance
      *
      * @return mixed
      */

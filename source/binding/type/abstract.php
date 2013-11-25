@@ -60,7 +60,7 @@ namespace Components;
      */
     public function getTargetType()
     {
-      return get_class($this->m_instance);
+      return $this->m_targetType;
     }
 
     /**
@@ -97,7 +97,7 @@ namespace Components;
 
     // OVERRIDES
     /**
-     * @see \Components\Binding_Type::named() \Components\Binding_Type::named()
+     * @see \Components\Binding_Type::named() named
      */
     public function named($name_)
     {
@@ -107,7 +107,7 @@ namespace Components;
     }
 
     /**
-     * @see \Components\Binding_Type::asSingleton() \Components\Binding_Type::asSingleton()
+     * @see \Components\Binding_Type::asSingleton() asSingleton
      */
     public function asSingleton()
     {
@@ -120,7 +120,8 @@ namespace Components;
      * The combination of binding type+name is unique, therefore we use
      * this key as the bindings hashcode for identification in binding
      * configuration.
-     *     * @see \Components\Object::hashCode() \Components\Object::hashCode()
+     *
+     * @see \Components\Object::hashCode() hashCode
      */
     public function hashCode()
     {
@@ -131,7 +132,7 @@ namespace Components;
     }
 
     /**
-     * @see \Components\Object::equals() \Components\Object::equals()
+     * @see \Components\Object::equals() equals
      */
     public function equals($object_)
     {
@@ -142,7 +143,7 @@ namespace Components;
     }
 
     /**
-     * @see \Components\Object::__toString() \Components\Object::__toString()
+     * @see \Components\Object::__toString() __toString
      */
     public function __toString()
     {
