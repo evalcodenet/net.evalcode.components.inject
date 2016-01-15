@@ -5,7 +5,7 @@ namespace Components;
 
 
   /**
-   * Binding_Exception
+   * Binding_Exception_Abstract
    *
    * <p>
    *   Root exception for binding configuration & injection problems.
@@ -17,7 +17,7 @@ namespace Components;
    *
    * @author evalcode.net
    */
-  class Binding_Exception extends Runtime_Exception
+  class Binding_Exception extends Runtime_Exception_Abstract
   {
 
   }
