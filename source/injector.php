@@ -515,7 +515,7 @@ namespace Components;
      */
     public function hashCode()
     {
-      return object_hash($this);
+      return \math\hasho($this);
     }
 
     /**
@@ -627,7 +627,7 @@ namespace Components;
       if($binding_->isPrimitive())
         return $instance;
 
-      $instanceId=object_hash($instance);
+      $instanceId=\math\hasho($instance);
       if(isset($this->m_injectedInstances[$instanceId]))
         return $this->m_injectedInstances[$instanceId];
 

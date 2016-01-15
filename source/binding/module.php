@@ -106,7 +106,7 @@ namespace Components;
      */
     public function hashCode()
     {
-      return string_hash(get_class($this));
+      return \math\hashs(get_class($this));
     }
 
     /**

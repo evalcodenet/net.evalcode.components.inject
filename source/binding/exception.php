@@ -5,7 +5,7 @@ namespace Components;
 
 
   /**
-   * Binding_Exception_Abstract
+   * Binding_Exception
    *
    * <p>
    *   Root exception for binding configuration & injection problems.
